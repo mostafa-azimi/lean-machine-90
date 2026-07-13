@@ -1,0 +1,12 @@
+.DS_Store
+DerivedData/
+BuildValidation/
+.build/
+build/
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+.env
+.env.*
+!.env.example
