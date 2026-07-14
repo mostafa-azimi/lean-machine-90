@@ -1,6 +1,6 @@
 # Lean Machine 90
 
-Lean Machine 90 is a private, local-first health and body-composition planning app. The initial client is a native SwiftUI iPhone app. A full Next.js web client is planned after the iOS daily loop is proven.
+Lean Machine 90 is a private, local-first health operating system for food, X3 training, WHOOP recovery, symptoms, body composition, planning, and AI-assisted review. The initial client is a native SwiftUI iPhone app. A full Next.js web client is planned after the iOS experience and shared backend are proven.
 
 ## Current status
 
@@ -12,6 +12,7 @@ Milestones 0–1 are in progress:
 - Multi-user-ready record ownership and sync metadata.
 - Five-tab application shell.
 - Foundation unit and UI tests.
+- Revised roadmap for first-party food logging, X3 force provenance, WHOOP OAuth, and an evidence-bounded AI coach.
 
 Production launches with no seeded personal data. Sample data belongs only in previews and explicit debug fixtures.
 
@@ -21,7 +22,9 @@ Production launches with no seeded personal data. Sample data belongs only in pr
 - SwiftUI, SwiftData, and Swift Charts.
 - No third-party application dependencies.
 - Local-first writes through SwiftData.
-- Cloud synchronization is opt-in and will use an outbox-based, idempotent protocol.
+- Cloud synchronization, WHOOP, and AI are separate opt-ins.
+- Cloud synchronization will use an outbox-based, idempotent protocol.
+- The minimal Vercel backend arrives during the iOS roadmap to protect provider and AI secrets; full web UI remains v2.
 - Web v2 will be a separate Next.js interface sharing API contracts, not SwiftUI code.
 
 See [Architecture decisions](docs/ARCHITECTURE_DECISIONS.md) and [Implementation plan](docs/IMPLEMENTATION_PLAN.md).
@@ -59,6 +62,7 @@ Simulator names vary by installed runtime. Use xcrun simctl list devices availab
 - Cloud sync will require explicit opt-in.
 - Health notes and progress photos will have separate sync/export controls.
 - The app does not diagnose, prescribe, manage medication, or guarantee outcomes.
+- The AI coach can identify patterns, explain possible causes, flag missing data, and suggest conservative next steps, but cannot replace clinical diagnosis.
 - HealthKit will be read-only and optional when implemented.
 
 ## Repository structure
